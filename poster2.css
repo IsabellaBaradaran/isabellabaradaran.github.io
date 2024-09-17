@@ -1,0 +1,72 @@
+body{
+    background:#f1cfe1;
+    margin: 0px;
+    color:rgb(250, 29, 136);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  h1{
+    margin:0px;
+    font-size: 6vh;
+    text-align:center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+  }
+
+  h2{
+    text-align:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 4vh;
+    color:aliceblue;
+  }
+  
+  h3{
+    color:aliceblue;
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+  }
+
+  h4{
+    color:aliceblue;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+
+  h5{
+    color:aliceblue;
+    position:absolute;
+    bottom: 10px;
+    left: 30px;
+  }
+
+  .container{
+    background:rgb(249, 178, 203);
+    position:relative;
+    
+    margin: 10px auto; /* 10px on the top and bottom, "auto" to center it on either side */
+    padding:20px;
+    
+    height:100vh;
+    width: 100vw; This is in "vh" units because we always want it to be relative to the height. In this case, it's a 3:5 ratio (60:100) */
+  }
+  
+  .circle{
+    width:30vh;
+    height: 30vh;
+    background:red;
+    border-radius:50%;
+    position:absolute;
+    bottom: 70px;
+    right: 50px;
+  }
+
+  .circle2{
+    width:30vh;
+    height: 30vh;
+    background:rgb(179, 194, 249);
+    border-radius:50%;
+    position:absolute;
+    top: 230px;
+    right: 50px;
+  }

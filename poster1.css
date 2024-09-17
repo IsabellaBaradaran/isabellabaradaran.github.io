@@ -1,0 +1,72 @@
+body{
+    background:#cfd8f1;
+    margin: 0px;
+    color:rgb(178, 236, 171);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  h1{
+    margin:0px;
+    font-size: 6vh;
+    text-align:center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:aliceblue;
+  }
+
+  h2{
+    text-align:center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 4vh;
+    color:black;
+  }
+  
+  h3{
+    color:aliceblue;
+    position: absolute;
+    bottom: 60px;
+    left: 30px;
+  }
+
+  h4{
+    color:aliceblue;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+  }
+
+  h5{
+    color:aliceblue;
+    position:absolute;
+    bottom: 10px;
+    left: 30px;
+  }
+
+  .container{
+    background:rgb(2, 138, 33);
+    position:relative;
+    
+    margin: 10px auto; /* 10px on the top and bottom, "auto" to center it on either side */
+    padding:20px;
+    
+    height:calc(100vh - 40px - 20px); /* 100% of the viewport height, minus 2x padding, minus 2x the margin. */
+    width:60vh; /* This is in "vh" units because we always want it to be relative to the height. In this case, it's a 3:5 ratio (60:100) */
+  }
+  
+  .circle{
+    width:30vh;
+    height: 30vh;
+    background:red;
+    border-radius:50%;
+    position:absolute;
+    top: 230px;
+    left: 50px;
+  }
+
+  .circle2{
+    width:30vh;
+    height: 30vh;
+    background:rgb(179, 194, 249);
+    border-radius:50%;
+    position:absolute;
+    top: 230px;
+    right: 50px;
+  }
