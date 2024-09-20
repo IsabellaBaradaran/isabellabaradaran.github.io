@@ -1,78 +1,138 @@
 body{
-    background:#f1cfe1;
-    margin: 0px;
-    color:rgb(250, 29, 136);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  }
-  h1{
-    margin:0px;
-    font-size: 15vh;
-    text-align:center;
-    position:absolute;
-    top: 200px;
-    left: 580px;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color:black;
-  }
+  background: white;
+  margin: 0px;
+}
 
-  h2{
-    text-align:center;
-    position:absolute;
-    top: 80px;
-    left: 100px;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size: 10vh;
-    color:aliceblue;
-  }
+.suki{
+  margin:0px;
+  font-size: 8vh;
+  text-align:left;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:white;
+  position: absolute;
+  left: 30px;
+  top: -30px;
+}
+
+.suki:hover {
+  color: rgb(251, 244, 178);
+}
+
+.waterhouse {
+  font-size: 8vh;
+  text-align:right;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color:white;
+  position: absolute;
+  right: 30px;
+  top: -30px;
+}
+
+.waterhouse:hover {
+  color: rgb(251, 244, 178);
+}
+
+.the {
+  font-size: 4vh;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 115px;
+  right: 270px;
+}
+
+
+.Sparklemuffin {
+  font-size: 9vh;
+  font-family:cursive;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+}
+
+.tour {
+  font-size: 6vh;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-align: center;
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+}
+
+.info {
+  font-size: 1.5vh;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-align: left;
+  position: absolute;
+  top: 80px;
+  left: 30px;
+}
+
+
+.container{
+  background: url(suki1_VSCO.JPG);
+  position:relative;
   
-  h3{
-    color:aliceblue;
-    text-align: center;
-    position: relative;
-    top: 70vh;
-  }
-
-  h4{
-    color:aliceblue;
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-  }
-
-  h5{
-    color:aliceblue;
-    position:absolute;
-    bottom: 10px;
-    left: 30px;
-  }
-
-  .container{
-    background:rgb(249, 178, 203);
-    position:relative;
-    
-    margin: 10px auto; /* 10px on the top and bottom, "auto" to center it on either side */
-    padding:20px;
-    
-    height:100vh;
-    width: 100vw; This is in "vh" units because we always want it to be relative to the height. In this case, it's a 3:5 ratio (60:100) */
-  }
+  margin: 10px auto; /* 10px on the top and bottom, "auto" to center it on either side */
+  padding:20px;
   
-  .circle{
-    width:30vh;
-    height: 30vh;
-    background:red;
-    border-radius:50%;
-    position:absolute;
-    bottom: 70px;
-    right: 50px;
-  }
+  height:calc(100vh - 40px - 20px); /* 100% of the viewport height, minus 2x padding, minus 2x the margin. */
+  width:60vh; /* This is in "vh" units because we always want it to be relative to the height. In this case, it's a 3:5 ratio (60:100) */
+}
 
-  .circle2{
-    width:30vh;
-    height: 30vh;
-    background:rgb(179, 194, 249);
-    border-radius:50%;
-    position:absolute;
-    top: 340px;
-    right: 50px;
-  }
+.circle1 {
+  width:2vh;
+  height:97vh;
+  background:rgb(141, 200, 255);
+  position:absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.circle2 {
+  width:2vh;
+  height:97vh;
+  background:rgb(16, 125, 4);
+  position:absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.circle3 {
+  width:65vh;
+  height:2vh;
+  background: rgb(16, 125, 4);
+  position:absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.circle4 {
+  width:65vh;
+  height:2vh;
+  background:rgb(16, 125, 4);
+  position:absolute;
+  bottom: 0px;
+  right: 0px;
+}  
+
+.circle1:hover {
+  background: rgb(251, 244, 178);
+}
+
+.circle2:hover {
+  background: rgb(251, 244, 178);
+}
+
+.circle3:hover {
+  background: rgb(251, 244, 178);
+}
+
+.circle4:hover {
+  background: rgb(251, 244, 178);
+}
