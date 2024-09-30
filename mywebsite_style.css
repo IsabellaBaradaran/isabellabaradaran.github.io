@@ -67,7 +67,7 @@ div {
 	}
 }
 
-@media (max-width: 460px) {
+@media (max-width: 390px) {
 	body {
 		background-color: rgb(199, 215, 251);
 	}
