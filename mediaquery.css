@@ -9,13 +9,6 @@ body {
     background-color: rgb(132, 202, 141);
 }
 
-.morning {
-    color:coral;
-    position: absolute;
-    left: 20px;
-    bottom: 110px;
-}
-
 .sun {
     width: 100px;
             height: 100px;
@@ -27,16 +20,43 @@ body {
             box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.8);
 }
 
-.work {
+.morning {
     color:coral;
+    position: absolute;
+    left: 20px;
+    bottom: 110px;
+}
+
+
+.coffee {
+    color:coral;
+    display: none;
+}
+
+.getready {
+    color:coral;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    display: none;
+}
+
+.subway {
+    color:coral;
+    position: absolute;
+    top: 80px;
+    left: 300px;
     display: none;
 }
 
 .lunch {
     color:coral;
     position: absolute;
-    top: 100px;
-    left: 250px;
+    top: 0px;
+    left: 500px;
+    width: 300px;
+    height: 100px;
+    text-align: center;
     display: none;
 }
 
@@ -51,81 +71,361 @@ body {
 .dinner {
     color:coral;
     position: absolute;
-    top: 0px;
-    left: 500px;
-    width: 300px;
-    height: 100px;
-    text-align: center;
+    top: 80px;
+    left: 300px;
     display: none;
 }
 
-@media (max-width: 1300px) {
+.workout {
+    color:coral;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    display: none;
+}
+
+.bed {
+    color:coral;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    display: none;
+}
+
+.sweetdreams {
+    color:coral;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    display: none;
+}
+
+.goodnight {
+    color:coral;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    display: none;
+}
+
+@media (max-width: 1400px) {
     body {
-       background-color:rgb(149, 213, 240);
+       background-color:rgb(188, 235, 255);
     }
     .sun {
         position: absolute;
-        left: 200px;
-        bottom: 300px;
+        left: 100px;
+        bottom: 100px;
     }
     .morning {
         display: none;
     }
-    .work {
+    .coffee {
+        display:flex;
+        position: absolute;
+        left: 100px;
+        bottom: 200px;
+        width: 100px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1300px) {
+    body {
+        background-color:rgb(166, 228, 255);
+     }
+     .sun {
+         position: absolute;
+         left: 150px;
+         bottom: 200px;
+     }
+     .morning {
+         display: none;
+     }
+     .coffee {
+         display: none;
+     }
+     .getready {
         display:flex;
         position: absolute;
         left: 150px;
-        bottom: 400px;
-    }
+        top: 300px;
+        width: 100px;
+        text-align: center;
+     }
 }
 
 @media (max-width: 1200px) {
     body {
-        background-color: rgb(92, 201, 248);
-    }
-    .work {
-        display:none;
-    }
-    .sun {
+        background-color:rgb(139, 218, 251);
+     }
+     .sun {
+         position: absolute;
+         left: 200px;
+         bottom: 300px;
+     }
+     .morning {
+         display: none;
+     }
+     .coffee {
+         display: none;
+     }
+     .getready {
+        display: none;
+     }
+     .subway {
+        display:flex;
         position: absolute;
-        left: 320px;
-        top: 180px;
-    }
-    .lunch {
-        display: flex;
-    }
+        left: 200px;
+        top: 170px;
+        width: 100px;
+        text-align: center;
+     }
 }
+
+@media (max-width: 1100px) {
+    body {
+        background-color:rgb(110, 210, 253);
+     }
+     .sun {
+         position: absolute;
+         left: 250px;
+         bottom: 400px;
+     }
+     .morning {
+         display: none;
+     }
+     .coffee {
+         display: none;
+     }
+     .getready {
+        display: none;
+     }
+     .subway {
+        display:none;
+     }
+     .lunch {
+        display:flex;
+        position: absolute;
+        left: 250px;
+        top: 110px;
+        width: 100px;
+        text-align: center;
+     }
+}
+
+/* need to work on these: */
 
 @media (max-width: 1000px) {
     body {
-        background-color:rgb(57, 136, 234);
-    }
-    .lunch {
+        background-color:rgb(171, 197, 244);
+     }
+     .sun {
+         position: absolute;
+         left: 300px;
+         bottom: 450px;
+         background: rgb(244, 244, 136); 
+     }
+     .morning {
+         display: none;
+     }
+     .coffee {
+         display: none;
+     }
+     .getready {
         display: none;
-    }
-    .sun {
+     }
+     .subway {
+        display:none;
+     }
+     .lunch {
+        display: none;
+     }
+     .workover {
+        display:flex;
         position: absolute;
-        left: 450px;
-        top: 150px;
-    }
-    .workover {
-        display: flex;
-    }
+        left: 300px;
+        top: 40px;
+        width: 100px;
+        text-align: center;
+        color:rgb(226, 43, 116);
+     }
 }
 
 @media (max-width: 900px) {
     body {
-        background-color:rgb(44, 86, 223);
-    }
-    .workover {
+        background-color:rgb(113, 159, 244);
+     }
+     .sun {
+         position: absolute;
+         left: 350px;
+         bottom: 500px;
+         background: rgb(236, 236, 231);
+         box-shadow: 0 0 20px 10px rgba(236, 236, 231); 
+     }
+     .morning {
+         display: none;
+     }
+     .coffee {
+         display: none;
+     }
+     .getready {
+        display: none;
+     }
+     .subway {
         display:none;
-    }
-    .sun {
+     }
+     .lunch {
+        display: none;
+     }
+     .workover {
+        display:none;
+     }
+     .dinner {
+        display:flex;
         position: absolute;
-        left: 600px;
-        top: 140px; 
-    }
-    .dinner {
-        display: flex;
-    }
+        left: 330px;
+        top: 10px;
+        width: 150px;
+        text-align: center;
+        color:rgb(226, 43, 116);
+     }
+}
+
+@media (max-width: 800px) {
+    body {
+        background-color:rgb(71, 126, 227);
+     }
+     .sun {
+         position: absolute;
+         left: 420px;
+         bottom: 530px;
+         background: rgb(236, 236, 231);
+         box-shadow: 0 0 20px 10px rgba(236, 236, 231); 
+     }
+     .morning {
+         display: none;
+     }
+     .coffee {
+         display: none;
+     }
+     .getready {
+        display: none;
+     }
+     .subway {
+        display:none;
+     }
+     .lunch {
+        display: none;
+     }
+     .workover {
+        display:none;
+     }
+     .dinner {
+        display:none;
+     }
+     .workout {
+        display:flex;
+        position: absolute;
+        left: 330px;
+        top: 0px;
+        width: 300px;
+        text-align: center;
+        color:rgb(255, 123, 176);
+     }
+}
+
+@media (max-width: 700px) {
+    body {
+        background-color:rgb(17, 79, 193);
+     }
+     .sun {
+         position: absolute;
+         left: 450px;
+         bottom: 550px;
+         background: rgb(236, 236, 231);
+         box-shadow: 0 0 20px 10px rgba(236, 236, 231); 
+     }
+     .morning {
+         display: none;
+     }
+     .coffee {
+         display: none;
+     }
+     .getready {
+        display: none;
+     }
+     .subway {
+        display:none;
+     }
+     .lunch {
+        display: none;
+     }
+     .workover {
+        display:none;
+     }
+     .dinner {
+        display:none;
+     }
+     .workout {
+        display: none;
+     }
+     .bed {
+        display:flex;
+        position: absolute;
+        left: 390px;
+        top: 0px;
+        width: 300px;
+        text-align: center;
+        color:rgb(255, 123, 176);
+     }
+}
+
+@media (max-width: 600px) {
+    body {
+        background-color:rgb(12, 59, 148);
+     }
+     .sun {
+         position: absolute;
+         left: 450px;
+         bottom: 550px;
+         background: rgb(236, 236, 231);
+         box-shadow: 0 0 20px 10px rgba(236, 236, 231); 
+     }
+     .morning {
+         display: none;
+     }
+     .coffee {
+         display: none;
+     }
+     .getready {
+        display: none;
+     }
+     .subway {
+        display:none;
+     }
+     .lunch {
+        display: none;
+     }
+     .workover {
+        display:none;
+     }
+     .dinner {
+        display:none;
+     }
+     .workout {
+        display: none;
+     }
+     .bed {
+        display: none;
+     } 
+     .goodnight {
+        display:flex;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        width: 300px;
+        text-align: center;
+        color:rgb(255, 123, 176);
+     }
 }
