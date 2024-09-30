@@ -1,0 +1,131 @@
+body {
+    background-color:rgb(209, 241, 255);
+}
+
+.banner {
+    color: purple;
+    width: 100px;
+    height: 200px;
+    background-color: rgb(132, 202, 141);
+}
+
+.morning {
+    color:coral;
+    position: absolute;
+    left: 20px;
+    bottom: 110px;
+}
+
+.sun {
+    width: 100px;
+            height: 100px;
+            background: yellow;
+            border-radius: 50%; /* Makes it a circle */
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+            box-shadow: 0 0 20px 10px rgba(255, 255, 0, 0.8);
+}
+
+.work {
+    color:coral;
+    display: none;
+}
+
+.lunch {
+    color:coral;
+    position: absolute;
+    top: 100px;
+    left: 250px;
+    display: none;
+}
+
+.workover {
+    color:coral;
+    position: absolute;
+    top: 80px;
+    left: 300px;
+    display: none;
+}
+
+.dinner {
+    color:coral;
+    position: absolute;
+    top: 0px;
+    left: 500px;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+    display: none;
+}
+
+@media (max-width: 1300px) {
+    body {
+       background-color:rgb(149, 213, 240);
+    }
+    .sun {
+        position: absolute;
+        left: 200px;
+        bottom: 300px;
+    }
+    .morning {
+        display: none;
+    }
+    .work {
+        display:flex;
+        position: absolute;
+        left: 150px;
+        bottom: 400px;
+    }
+}
+
+@media (max-width: 1200px) {
+    body {
+        background-color: rgb(92, 201, 248);
+    }
+    .work {
+        display:none;
+    }
+    .sun {
+        position: absolute;
+        left: 320px;
+        top: 180px;
+    }
+    .lunch {
+        display: flex;
+    }
+}
+
+@media (max-width: 1000px) {
+    body {
+        background-color:rgb(57, 136, 234);
+    }
+    .lunch {
+        display: none;
+    }
+    .sun {
+        position: absolute;
+        left: 450px;
+        top: 150px;
+    }
+    .workover {
+        display: flex;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        background-color:rgb(44, 86, 223);
+    }
+    .workover {
+        display:none;
+    }
+    .sun {
+        position: absolute;
+        left: 600px;
+        top: 140px; 
+    }
+    .dinner {
+        display: flex;
+    }
+}
