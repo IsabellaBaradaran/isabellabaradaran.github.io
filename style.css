@@ -20,3 +20,9 @@ div {
 .subhead {
     color:hotpink;
 }
+
+@media (max-width: 500px) {
+    body {
+        background-color:rgb(182, 207, 255);
+    }
+}
