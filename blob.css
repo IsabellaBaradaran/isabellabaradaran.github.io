@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.blob-container {
+    display: flex;
+    gap: 20px;
+}
+
+.blob-letter {
+    width: 100px;
+    height: 150px;
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.blob-letter:hover {
+    transform: scale(1.2);
+}
+
+.letter-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-b::before,
+.letter-b::after {
+    content: '';
+    width: 80%;
+    height: 40%;
+    background-color: #8e44ad;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+}
+
+.letter-b::before {
+    top: 10%;
+}
+
+.letter-b::after {
+    top: 50%;
+}
+
+.letter-b .vertical-bar {
+    width: 30%;
+    height: 100%;
+    background-color: #8e44ad;
+    position: absolute;
+    left: 10%;
+    border-radius: 10px;
+}
+
+.letter-l {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.letter-l .vertical-bar {
+    width: 20%;
+    height: 80%;
+    background-color: #8e44ad;
+    border-radius: 10px;
+}
+
+.letter-l .horizontal-bar {
+    width: 60%;
+    height: 20%;
+    background-color: #8e44ad;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.letter-o {
+    background-color: #8e44ad;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-o::before {
+    content: '';
+    width: 70%;
+    height: 70%;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+}
+
+.letter-second-b {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-second-b::before,
+.letter-second-b::after {
+    content: '';
+    width: 80%;
+    height: 40%;
+    background-color: #8e44ad;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+}
+
+.letter-second-b::before {
+    top: 10%;
+}
+
+.letter-second-b::after {
+    top: 50%;
+}
+
+.letter-second-b .vertical-bar {
+    width: 30%;
+    height: 100%;
+    background-color: #8e44ad;
+    position: absolute;
+    left: 10%;
+    border-radius: 10px;
+}
