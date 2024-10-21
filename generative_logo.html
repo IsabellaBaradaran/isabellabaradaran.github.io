@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f0f0f0;
+        }
+    
+        img {
+          max-width: 80%;
+          max-height: 80%;
+          object-fit: contain;
+        }
+      </style>
+</head>
+<body>
+      <script>
+        const images = ['logo-01.png', 'logo-02.png', 'logo-03.png', 'logo-04.png'];
+    
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+    
+        const imgElement = document.createElement('img');
+        imgElement.src = randomImage;
+        document.body.appendChild(imgElement);
+      </script>
+</body>
+</html>
