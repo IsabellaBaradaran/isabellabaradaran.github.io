@@ -24,10 +24,19 @@
 </head>
 <body>
       <script>
-        const images = ['logo-01.png', 'logo-02.png', 'logo-03.png', 'logo-04.png'];
+        const images = ['burningmans-1.png', 'burningmans-2.png', 'burningmans-3.png', 'burningmans-4.png', 'burningmans-5.png', 'burningmans-6.png',];
     
         const randomImage = images[Math.floor(Math.random() * images.length)];
     
+        const imgElement = document.createElement('img');
+        imgElement.src = randomImage;
+        document.body.appendChild(imgElement);
+      </script>
+      <script>
+         const images = ['fires-1.png', 'fires-2.png', 'fires-3.png',];
+    
+        const randomImage = images[Math.floor(Math.random() * images.length)];
+
         const imgElement = document.createElement('img');
         imgElement.src = randomImage;
         document.body.appendChild(imgElement);
