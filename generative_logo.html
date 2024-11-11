@@ -5,6 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        .image1 {
+        position: absolute;
+        top: 50px; /* Adjust as needed */
+        left: 50px; /* Adjust as needed */
+        z-index: 1;
+    }
+
+    /* Style for the second image, overlapping the first */
+    .image2 {
+        position: absolute;
+        top: 70px; /* Adjust as needed to create overlap */
+        left: 70px; /* Adjust as needed to create overlap */
+        z-index: 2; /* Higher z-index to place it above the first image */
+        opacity: 0.8; /* Optional: Slight transparency for a better overlap effect */
+    }
+        
         body {
           margin: 0;
           padding: 0;
@@ -24,22 +40,32 @@
 </head>
 <body>
       <script>
-        const images = ['burningmans-1.png', 'burningmans-2.png', 'burningmans-3.png', 'burningmans-4.png', 'burningmans-5.png', 'burningmans-6.png',];
+        const images1 = ['burningmans-1.png', 'burningmans-2.png', 'burningmans-3.png', 'burningmans-4.png', 'burningmans-5.png', 'burningmans-6.png'];
     
-        const randomImage = images[Math.floor(Math.random() * images.length)];
+    const imgElement1 = document.createElement('img');
+    document.body.appendChild(imgElement1);
     
-        const imgElement = document.createElement('img');
-        imgElement.src = randomImage;
-        document.body.appendChild(imgElement);
+    function displayRandomImage1() {
+        const randomImage1 = images1[Math.floor(Math.random() * images1.length)];
+        imgElement1.src = randomImage1;
+    }
+    
+    displayRandomImage1();
+    imgElement1.addEventListener('click', displayRandomImage1);
       </script>
       <script>
-         const images = ['fires-1.png', 'fires-2.png', 'fires-3.png',];
+    const images2 = ['fires-1.png', 'fires-2.png', 'fires-3.png'];
     
-        const randomImage = images[Math.floor(Math.random() * images.length)];
-
-        const imgElement = document.createElement('img');
-        imgElement.src = randomImage;
-        document.body.appendChild(imgElement);
+    const imgElement2 = document.createElement('img');
+    document.body.appendChild(imgElement2);
+    
+    function displayRandomImage2() {
+        const randomImage2 = images2[Math.floor(Math.random() * images2.length)];
+        imgElement2.src = randomImage2;
+    }
+    
+    displayRandomImage2();
+    imgElement2.addEventListener('click', displayRandomImage2);
       </script>
 </body>
 </html>
