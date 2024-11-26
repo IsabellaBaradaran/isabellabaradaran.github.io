@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock Demo - Basic</title>
+    <link
+        rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔢</text></svg>"
+    />
+    <style>
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        body {
+            background-color: #000000;
+            min-height: 100vh;
+            margin: 0;
+            display: grid;
+            place-content: center;
+            align-items: center;
+            font-family: Helvetica, sans-serif;
+        }
+
+    .morning {
+        background-color: rgb(250, 208, 215);
+        color: rgb(184, 48, 93);
+        font-size: 20pt;
+    }
+    .afternoon {
+        background-color: lightblue;
+        color: teal;
+
+    }
+    .evening {
+        background-color: lavender;
+        color: plum;
+    }
+    .late {
+        background-color: navy;
+color: gold;
+    }
+
+
+        .clock {
+            font-family: Helvetica, sans-serif;
+            color: #ffffff;
+            font-size: 126px;
+            font-weight: bold;
+            letter-spacing: -0.03em;
+            place-items: center;
+            gap: 10px;
+        }
+
+        #ampm {
+            font-size: 46px;
+            position: absolute;
+            right: 80px;
+            bottom: 150px;
+            display: flex;
+        }
+
+        .message {
+            position: absolute;
+            display: flex;
+            top: 100px;
+            right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="message">Hello!</div>
+    <div class="clock">
+        <div id="hour"></div>
+        <div class="colon">:</div>
+        <div id="minute"></div>
+        <div class="colon">:</div>
+        <div id="second"></div>
+        <div id="ampm"></div>
+    </div>
+    <script>
+        const hourText = document.getElementById("hour");
+        const minuteText = document.getElementById("minute");
+  const secondText = document.getElementById("second");
+        const ampmText = document.getElementById("ampm");
+        const messageText = document.getElementById("message");
+        const morningImage = 'clock_backgrounds.png'; 
+        const afternoonImage = 'clock_backgrounds2.png'; 
+        const nightImage = 'clock_backgrounds3.png'; 
+
+    // Get the current hour
+    const currentHour = new Date().getHours();
+
+    // Get the body element and set the background image based on the time
+    const body = document.body;
+    const greeting = document.getElementById('greeting');
+
+function updateClock() {
+            let date = new Date();
+            let hours = date.getHours();
+            let minutes = date.getMinutes();
+            let seconds = date.getSeconds();
+        
+ // Temporary troubleshooting - un-comment to write specific data for testing
+    // hours = 14;
+  	// minutes = 14;
+  	// seconds = 33;
+            let ampm;
+				if (hours >= 12) {
+					ampm = "PM";
+				} else {
+					ampm = "AM";
+				}
+
+         if (hours < 10) {
+					hours = "0" + hours;
+				}
+
+		if (minutes < 10) {
+					minutes = "0" + minutes;
+				}
+
+		if (seconds < 10) {
+					seconds = "0" + seconds;
+				}
+
+                hourText.textContent = hours;
+            minuteText.textContent = minutes;
+    secondText.textContent = seconds;
+            ampmText.textContent = ampm;
+
+            if (hours >= 4 && hours < 12) {
+  messageText.textContent = "Good Morning! ☀️";
+  document.body.className = "morning";
+  body.style.backgroundImage = `url('${morningImage}')`;
+} else if (hours >= 12 && hours < 17) {
+  messageText.textContent = "Good Afternoon!";
+  document.body.className = "afternoon";
+  body.style.backgroundImage = `url('${afternoonImage}')`;
+} else if (hours >= 17 && hours < 4) {
+  messageText.textContent = "Good Evening!";
+  document.body.className = "evening";
+  body.style.backgroundImage = `url('${nightImage}')`;
+}  
+        }
+            
+        updateClock();
+        setInterval(updateClock, 1000);
+</script>
+</body>
+</html>

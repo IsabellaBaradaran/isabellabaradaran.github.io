@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>p5.js Eyes Following Cursor</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+</head>
+<body>
+    <script>
+        let helveticaFont;
+    
+        function preload() {
+          // Ensure the browser uses Helvetica if available
+          helveticaFont = "Helvetica";
+        }
+    
+        function setup() {
+          createCanvas(windowWidth, windowHeight);
+          colorMode(HSB);
+          noCursor(); // Hide the default cursor
+    
+          // Set angle mode so that atan2() returns angles in degrees
+          angleMode(DEGREES);
+    
+          describe('Two larger eyes that are slightly closer together and follow the cursor. Cursor shows a digital clock with AM/PM using Helvetica Bold font.');
+        }
+    
+        function draw() {
+          background(330, 50, 100);
+    
+          // Larger and closer eyes
+          let eyeSize = 100;         // Outer eye size
+          let pupilSize = 50;        // Inner eye size
+          let eyeSpacing = 150;      // Distance between eyes
+    
+          // Draw left eye
+          let leftX = width / 2 - eyeSpacing / 2;
+          let leftY = height / 2;
+    
+          // Calculate angle between left eye and mouse
+          let leftAngle = atan2(mouseY - leftY, mouseX - leftX);
+    
+          push();
+          translate(leftX, leftY);
+          fill(255);
+          ellipse(0, 0, eyeSize, eyeSize); // Outer eye
+          rotate(leftAngle);
+          fill(0);
+          ellipse(eyeSize / 4, 0, pupilSize, pupilSize); // Pupil
+          pop();
+    
+          // Draw right eye
+          let rightX = width / 2 + eyeSpacing / 2;
+          let rightY = height / 2;
+    
+          // Calculate angle between right eye and mouse
+          let rightAngle = atan2(mouseY - rightY, mouseX - rightX);
+    
+          push();
+          translate(rightX, rightY);
+          fill(255);
+          ellipse(0, 0, eyeSize, eyeSize); // Outer eye
+          rotate(rightAngle);
+          fill(0);
+          ellipse(eyeSize / 4, 0, pupilSize, pupilSize); // Pupil
+          pop();
+    
+          // Draw custom cursor (digital clock)
+          drawCustomCursor();
+        }
+    
+        function drawCustomCursor() {
+          let currentHour = hour();
+          let ampm = currentHour >= 12 ? "PM" : "AM"; // Determine AM or PM
+          let displayHour = currentHour % 12 || 12;   // Convert hour to 12-hour format
+          let minutes = nf(minute(), 2);             // Two-digit minutes
+          let seconds = nf(second(), 2);             // Two-digit seconds
+          let timeString = `${displayHour}:${minutes}:${seconds} ${ampm}`; // Format as "HH:MM:SS AM/PM"
+    
+          push();
+          translate(mouseX, mouseY);
+          fill(255);
+          stroke(0);
+          strokeWeight(2);
+          textFont(helveticaFont); // Set font to Helvetica
+          textStyle(BOLD);         // Make it bold
+          textSize(60);            // Size of clock text
+          textAlign(CENTER, CENTER);
+          text(timeString, 0, 0);  // Display time at the cursor position
+          pop();
+        }
+    
+        function windowResized() {
+          resizeCanvas(windowWidth, windowHeight);
+        }
+      </script>
+</body>
+</html>
